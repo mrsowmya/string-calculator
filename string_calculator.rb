@@ -8,7 +8,7 @@ class StringCalculator
     output = []
  
     @numbers.each do |number|
-      output << number.split(/[\\n,]/).map(&:to_i).sum
+      output << number.split(/[\\n,;]/).map(&:to_i).sum
     end
 
     output.join(", ")

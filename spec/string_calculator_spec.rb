@@ -45,4 +45,12 @@ describe 'String Calculator' do
       expect(string_calculator.add).to eq('6, 1')
     end
   end
+
+  context 'with different delimiters character' do
+    it 'should return sum' do
+      string_calculator = StringCalculator.new('//;\n1;2')
+
+      expect(string_calculator.add).to eq('3')
+    end
+  end
 end
