@@ -5,5 +5,6 @@ class StringCalculator
   end
 
   def add
+    @numbers.map(&:to_i).join(", ")
   end
 end

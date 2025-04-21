@@ -9,4 +9,14 @@ describe 'String Calculator' do
       expect(string_calculator.instance_variable_get(:@numbers)).to eq(['', '1', '1,5'])
     end
   end
+
+  describe '#add' do
+    context 'with empty string' do
+      it 'should return sum' do
+        string_calculator = StringCalculator.new('')
+
+        expect(string_calculator.add).to eq('0')
+      end
+    end
+  end
 end
