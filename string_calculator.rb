@@ -12,6 +12,7 @@ class StringCalculator
       array = number.split(/[\\n,;]/).map(&:to_i)
  
       negative_numbers.concat(array.select { |a| a < 0 })
+      array.reject! { |x| x > 1000 }
 
       next unless negative_numbers.empty?
 

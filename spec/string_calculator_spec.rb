@@ -61,4 +61,12 @@ describe 'String Calculator' do
       expect(string_calculator.add).to eq('Negative numbers not allowed - -1,-4')
     end
   end
+
+  context 'Numbers greater than 1000' do
+    it 'should return sum' do
+      string_calculator = StringCalculator.new('1001, 2', '1,2')
+
+      expect(string_calculator.add).to eq('2, 3')
+    end
+  end
 end
