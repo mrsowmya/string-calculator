@@ -53,4 +53,12 @@ describe 'String Calculator' do
       expect(string_calculator.add).to eq('3')
     end
   end
+
+  context 'with negative numbers' do
+    it 'should return error message' do
+      string_calculator = StringCalculator.new('-1', '2,3,-4')
+
+      expect(string_calculator.add).to eq('Negative numbers not allowed - -1,-4')
+    end
+  end
 end
