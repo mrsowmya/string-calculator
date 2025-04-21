@@ -19,4 +19,14 @@ describe 'String Calculator' do
       end
     end
   end
+
+  describe '#add' do
+    context 'with positive numbers' do
+      it 'should return sum' do
+        string_calculator = StringCalculator.new('', '1', '1,2')
+
+        expect(string_calculator.add).to eq('0, 1, 3')
+      end
+    end
+  end
 end

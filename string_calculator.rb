@@ -5,6 +5,12 @@ class StringCalculator
   end
 
   def add
-    @numbers.map(&:to_i).join(", ")
+    output = []
+ 
+    @numbers.each do |number|
+      output << number.split(",").map(&:to_i).sum
+    end
+
+    output.join(", ")
   end
 end
